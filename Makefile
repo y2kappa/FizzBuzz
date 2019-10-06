@@ -23,7 +23,7 @@ python-run: ## python run
 	python ./python/main.py --n $(number)
 
 cpp-build: ## cpp build
-	g++ -o Cpp/a.out Cpp/main.cpp
+	g++ --std=c++11 -o Cpp/a.out Cpp/main.cpp
 
 cpp-run: ## cpp run
 	./Cpp/a.out $(number)

@@ -1,23 +1,13 @@
-let generate n =
-  let rec aux i =
-    if i > n then
-      ()
-    else
-      begin
-        let output =
-          match i mod 3 = 0, i mod 5 = 0 with
-          | true, true -> "FizzBuzz"
-          | true, false -> "Fizz"
-          | false, true -> "Buzz"
-          | false, false -> string_of_int i
-        in
-        Printf.printf "%s \n" output;
-        aux (i+1)
-      end
-  in
-  aux 1
+let fizz = "Fizz\n"
+let buzz = "Buzz\n"
+let fizzbuzz = "FizzBuzz\n"
 
-
+let fb n =
+  match n mod 3, n mod 5 with
+    | 0, 0 -> print_string fizzbuzz
+    | 0, _ -> print_string fizz
+    | _, 0 -> print_string buzz
+    | _, _ -> Printf.printf "%s\n" (string_of_int n)
 
 let () =
   let default_value = 10 in
@@ -34,4 +24,4 @@ let () =
   in
 
   Printf.printf "Starting FizzBuzz for %d \n" number;
-  generate number
+  for i = 1 to number do fb i done

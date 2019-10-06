@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+constexpr char const* fizz = "Fizz\n";
+constexpr char const* buzz = "Buzz\n";
+constexpr char const* fizzbuzz = "FizzBuzz\n";
+
 int main(int argc, char** argv)
 {
     int number = 10;
@@ -12,13 +16,13 @@ int main(int argc, char** argv)
     {
         if (i % 15 == 0)
         {
-            std::cout << "Fizz" << std::endl;
+            std::cout << fizz;
         } else if (i % 5 == 0) {
-            std::cout << "Buzz" << std::endl;
+            std::cout << buzz ;
         } else if (i % 3 == 0) {
-            std::cout << "Fizz" << std::endl;
+            std::cout << fizzbuzz;
         } else {
-            std::cout << i << std::endl;
+            std::cout << i << "\n";
         }
     }
     return 0;

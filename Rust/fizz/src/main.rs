@@ -2,13 +2,13 @@ fn main() {
     let num =
         match std::env::args().skip(1).next() {
             None => 5,
-            Some (x) => x.parse::<u16>().unwrap()
+            Some (x) => x.parse::<u32>().unwrap()
         };
     println!("Number {}", num);
     fizz(num);
 }
 
-fn fizz(n: u16){
+fn fizz(n: u32){
     for x in 1..(n+1) {
         let output =
             match (x % 3 == 0, x % 5 == 0) {
