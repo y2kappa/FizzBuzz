@@ -1,0 +1,6 @@
+[package]
+name = "fizz"
+version = "0.1.0"
+authors = ["Marius Ciubotariu <marius.ciubotariu@gmail.com>"]
+
+[dependencies]
